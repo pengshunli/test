@@ -1,0 +1,1 @@
+export const RECEIVE_SEARCHLIST = 'receive_searchList'
