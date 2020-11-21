@@ -1,0 +1,30 @@
+**在父组件中,直接在需要传递的属性后面加上.sync**
+<test4 :word.sync="word"/>
+**在子组件中**
+<template>
+  <div>
+    <h3>{{word}}</h3>
+    <input type="text" v-model="str" />
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    word: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      str: '',
+    }
+  },
+  watch: {
+    str(newVal, oldVal) {
+      // 在监听你使用update事件来更新word,而在父组件不需要调用该函数
+      this.$emit('update:word', newVal);
+    }
+  }
+}
+</script>
