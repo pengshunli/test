@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    福田公安分局智慧指挥平台
+  </title>
+  <link rel="stylesheet" type="text/css" href="./iconfont.css" rel="external nofollow">
+  <style>
+  </style>
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<body>
+  <!-- <script>
+        window.vConsole = new window.VConsole()
+      </script> -->
+  <noscript>
+    <strong>We're sorry but nysq doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+ 
+  <div id="app">
+  </div>
+  <script>
+    function locationReplace(url) {
+      window.console.log('url',url)
+      if (history.replaceState) {
+        history.replaceState(null, '智能办会系统', url);
+        history.go(0)
+      } else {
+        window.location.replace(url)
+      }
+    }
+    locationReplace('index.html?type=1')
+  </script>
+  <script>
+    $.mobile.pushStateEnabled = false;
+    </script>
+</body>
+
+</html>

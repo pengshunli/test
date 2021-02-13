@@ -1,0 +1,6 @@
+   <canlender v-model="now" />
+   data(){
+      now: new Date(),
+     }
+  
+
